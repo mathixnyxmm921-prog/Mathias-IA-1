@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Mathias — Asistente personal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <a class="brand" href="#">
+                    <div class="brand-logo">M</div>
+                    <div class="brand-text">
+                        <strong>Mathias</strong>
+                        <span>PERSONAL AI</span>
+                    </div>
+                </a>
+
+                <button id="newChat" class="new-chat" type="button">
+                    <span class="plus-icon">＋</span>
+                    <span>Nuevo chat</span>
+                    <span class="shortcut">N</span>
+                </button>
+
+                <div class="section-label">TU ESPACIO</div>
+
+                <div class="sidebar-nav">
+                    <div class="nav-item selected">
+                        <span class="nav-icon">◈</span>
+                        <span>Conversaciones</span>
+                    </div>
+                </div>
+
+                <div class="history-heading">
+                    <span>HISTORIAL</span>
+                </div>
+
+                <div id="chatHistory" class="chat-history"></div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="account-card">
+                    <div class="account-avatar">C</div>
+                    <div class="account-details">
+                        <strong>Collazos</strong>
+                        <span>Usuario</span>
+                    </div>
+                    <span class="account-menu">•••</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <header class="topbar">
+                <div class="topbar-title">
+                    <span class="mobile-logo">M</span>
+                    <div>
+                        <h2>Mathias</h2>
+                        <span class="topbar-caption">Tu asistente personal</span>
+                    </div>
+                </div>
+
+                <div class="connection-status">
+                    <span class="online-dot"></span>
+                    <span>En línea</span>
+                </div>
+            </header>
+
+            <section id="messages" class="messages">
+                <div class="welcome-screen">
+                    <div class="welcome-orb">
+                        <span>M</span>
+                    </div>
+
+                    <div class="welcome-eyebrow">TU ASISTENTE PERSONAL</div>
+
+                    <h1>Hola, Collazos.</h1>
+
+                    <p class="welcome-description">
+                        ¿Qué tienes en mente hoy?
+                        Estoy listo para ayudarte.
+                    </p>
+
+                    <div class="suggestions">
+                        <button class="suggestion" type="button"
+                            data-suggestion="Hola Mathias, preséntate y dime qué puedes hacer.">
+                            <span class="suggestion-icon">✦</span>
+                            <span>
+                                <strong>Conocer a Mathias</strong>
+                                <small>Descubre lo que puedo hacer</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion" type="button"
+                            data-suggestion="Ayúdame a aprender programación desde cero.">
+                            <span class="suggestion-icon">⌘</span>
+                            <span>
+                                <strong>Aprender programación</strong>
+                                <small>Practica y mejora tus habilidades</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion" type="button"
+                            data-suggestion="Abre YouTube">
+                            <span class="suggestion-icon">↗</span>
+                            <span>
+                                <strong>Abrir una aplicación</strong>
+                                <small>Prueba los comandos de Mathias</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="composer-area">
+                <form id="chatForm" class="composer">
+                    <textarea
+                        id="messageInput"
+                        placeholder="Escribe lo que quieras..."
+                        rows="1"
+                        autocomplete="off"
+                        required
+                    ></textarea>
+
+                    <div class="composer-bottom">
+                        <div class="composer-hint">
+                            <span class="hint-dot"></span>
+                            Mathias está listo
+                        </div>
+
+                        <button id="sendButton" type="submit" aria-label="Enviar mensaje">
+                            <span>↑</span>
+                        </button>
+                    </div>
+                </form>
+
+                <p class="footer-text">
+                    Mathias AI · Tu asistente personal puede cometer errores.
+                </p>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
